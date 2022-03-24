@@ -422,13 +422,13 @@
         @endif
         {{ $nome }}!
 
-        @foreach ($arr as $num)
-            <p>{{ $num }}</p>
+
+        @foreach ($nomes as $pessoa)
+            <p>{{ $loop->index + 1 }} º Nome: {{ $pessoa }}</p>
         @endforeach
 
-
     </h2>
-    <p>São {{ $horaatual }}</p>
+    <p>São {{ $hora_atual }}</p>
 
 
 

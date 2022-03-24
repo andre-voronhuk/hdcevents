@@ -19,7 +19,8 @@
         }
 
         body {
-            margin: 0
+            margin: 0;
+
         }
 
         a {
@@ -401,6 +402,8 @@
     <style>
         body {
             font-family: 'Nunito', sans-serif;
+            color: rgb(255, 255, 255, 0.87);
+            background-color: #222223;
         }
 
     </style>
@@ -408,12 +411,22 @@
 
 <body class="antialiased">
     <h2>
-        @if ($hora >= 12)
-            Boa Tarde
+        @if ($hora >= 19 or $hora < 4)
+            Boa Noite
         @else
-            Bom Dia
+            @if ($hora >= 12)
+                Boa Tarde
+            @else
+                Bom Dia
+            @endif
         @endif
         {{ $nome }}!
+
+        @foreach ($arr as $num)
+            <p>{{ $num }}</p>
+        @endforeach
+
+
     </h2>
     <p>São {{ $horaatual }}</p>
 

@@ -14,19 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     $nome = "André";
-    $hora = 8;
+    $arr = [1, 2, 3, 4, 5];
 
-    return view('welcome',['nome'=>$nome,'hora'=>date('H'),'horaatual'=>date('H:i:s')]);
+    date_default_timezone_set("America/Sao_Paulo");
 
+    return view('welcome', [
+        'nome' => $nome,
+        'hora' => date('H'),
+        'horaatual' => date('H:i:s'),
+        'arr' => $arr
+    ]);
 });
-Route::get('/contato',function () {
+Route::get('/contato', function () {
     return view('contact');
-
 });
 
-Route::get('/produtos',function () {
+Route::get('/produtos', function () {
     return view('products');
-
 });
-

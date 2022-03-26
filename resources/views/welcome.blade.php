@@ -16,7 +16,7 @@
         {{ $nome }}!
     </h1>
     <h4>
-        <img src="/img/banner.jpg" alt="Banner" />
+        {{-- <img src="/img/banner.jpg" alt="Banner" /> --}}
 
         @foreach ($nomes as $pessoa)
             <p>{{ $loop->index + 1 }} º Nome: {{ $pessoa }}</p>

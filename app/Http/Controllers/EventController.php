@@ -11,7 +11,7 @@ class EventController extends Controller
     {
         $nome = "André";
         $arr = [1, 2, 3, 4, 5];
-        $nomes = ["Alice", "João", "Marcio", "Lucas"];
+        $nomes = ["Pedro", "João", "Marcio", "Lucas"];
 
         date_default_timezone_set("America/Sao_Paulo");
 
@@ -22,5 +22,9 @@ class EventController extends Controller
             'arr' => $arr,
             'nomes' => $nomes
         ]);
+    }
+    public function create()
+    {
+        return view('events.create');
     }
 }

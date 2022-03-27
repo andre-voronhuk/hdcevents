@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/scripts.js"></script>
 
+
 </head>
 
 <body class="antialiased">
@@ -37,7 +38,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">
+                        <a href="/events/create" class="nav-link">
                             Criar Eventos
                         </a>
                     </li>
@@ -61,6 +62,9 @@
         <p>HDC Events &copy; 2022</p>
     </footer>
 
+    {{-- Icons --}}
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

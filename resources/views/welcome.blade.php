@@ -12,11 +12,13 @@
             @else
                 Bom Dia
             @endif
-        @endif
-        {{ $nome }}!
+        @endif {{ $nome }}!
     </h1>
     <h4>
-        <img src="/img/banner.jpg" alt="Banner" />
+        <div class="img_wrapper">
+
+            <img src="/img/banner.jpg" alt="Banner" />
+        </div>
 
         @foreach ($nomes as $pessoa)
             <p>{{ $loop->index + 1 }} º Nome: {{ $pessoa }}</p>

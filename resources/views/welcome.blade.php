@@ -3,27 +3,17 @@
 @section('title', 'HDC Events')
 
 @section('content')
-    <h1>
-        @if ($hora >= 19 or $hora < 4)
-            Boa Noite
-        @else
-            @if ($hora >= 12)
-                Boa Tarde
-            @else
-                Bom Dia
-            @endif
-        @endif {{ $nome }}!
-    </h1>
+
     <h4>
-        <div class="img_wrapper">
 
-            <img src="/img/banner.jpg" alt="Banner" />
-        </div>
 
-        @foreach ($nomes as $pessoa)
-            <p>{{ $loop->index + 1 }} º Nome: {{ $pessoa }}</p>
+        @foreach ($events as $event)
+            <h2>
+                #{{ $event['id'] }}:
+                {{ $event['title'] }}</h2>
+            <h4>{{ $event['description'] }} </h4> <br>
         @endforeach
 
     </h4>
-    <p>São {{ $hora_atual }}</p>
+
 @endsection

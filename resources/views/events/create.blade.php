@@ -3,5 +3,12 @@
 @section('title', 'Criar Evento')
 
 @section('content')
-    <h1>Crie um evento!</h1>
+    <div id="event-create-container" class="col-md-6-offset-md-3">
+        <h1>Crie seu evento</h1>
+        <form action="/events" method="POST">
+
+
+        </form>
+    </div>
+
 @endsection

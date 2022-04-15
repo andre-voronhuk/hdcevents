@@ -58,7 +58,7 @@
     </header>
 
     <main>
-        <div class="container--fluid">
+        <div class="container-fluid">
             <div class="row">
 
                 @if (session('msg'))
